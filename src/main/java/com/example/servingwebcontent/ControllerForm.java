@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ControllerForm {
     @PostMapping("/form")
-    public String form(String personName,String contrasenya,Model model){
-        model.addAttribute("Name", personName);
-        model.addAttribute("Password", contrasenya);
+    public String form(String username,String password,Model model){
+        model.addAttribute("Username", username);
+        model.addAttribute("Password", password);
         return "userInfo";
     }
     @GetMapping("/for")
-    public String postForm(String personName,String contrasenya,Model model){
+    public String postForm(String username,String password,Model model){
         return "userForm";
     }
 }
